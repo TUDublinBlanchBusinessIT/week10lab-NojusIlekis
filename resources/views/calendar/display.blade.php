@@ -25,13 +25,14 @@
         }
         
       });
-      $(function () {
+      
+     calendar.render();
+  });
+  $(function () {
     $('body').on('click', '#submitButton', function (e) {
         $(this.form).submit();
         $('#fullCalModal').modal('hide');
     });
 });
-     calendar.render();
-  });
 </script>
 @endsection
