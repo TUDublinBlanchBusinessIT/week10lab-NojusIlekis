@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+@include('calendar.assets')
 @include('calendar.modalbooking')
 <div id="calendar"></div>
 <script>
@@ -21,16 +21,8 @@
             $('#starttime').val(info.date.toISOString().substring(11,16));
             $('#bookingDate').val(info.date.toISOString().substring(0,10));
             $('#fullCalModal').modal('show');
-            
         }
-        
       });
-      $(function () {
-    $('body').on('click', '#submitButton', function (e) {
-        $(this.form).submit();
-        $('#fullCalModal').modal('hide');
-    });
-});
      calendar.render();
   });
 </script>
