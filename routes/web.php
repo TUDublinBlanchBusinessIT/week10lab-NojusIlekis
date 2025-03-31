@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,3 +26,5 @@ Route::resource('courts', App\Http\Controllers\courtController::class);
 
 
 Route::resource('bookings', App\Http\Controllers\bookingController::class);
+
+Route::get('/calendar/display', 'App\Http\Controllers\calendarController@display')->name('calendar.display');
